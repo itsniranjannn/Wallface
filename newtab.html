@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>New Tab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Space+Grotesk:wght@300;400;500&family=Inter:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background media layer -->
+  <div id="bg-layer">
+    <img id="bg-image" alt="" />
+    <video id="bg-video" autoplay loop muted playsinline></video>
+    <div id="bg-empty">
+      <div class="empty-inner">
+        <p class="empty-eyebrow">this tab is blank on purpose</p>
+        <h1 class="empty-title">give it a backdrop</h1>
+        <p class="empty-sub">a photo, a gif, or a video — 4K and up looks best</p>
+        <button id="empty-upload-btn" class="btn-primary">choose a file</button>
+        <p class="empty-hint">or just drop it anywhere on this page</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time-of-day ambient gradient (signature element) -->
+  <div id="ambient-overlay"></div>
+  <!-- Slow-drifting animated color orbs, echo the chosen accent pair -->
+  <div id="ambient-orbs"><span class="orb orb-a"></span><span class="orb orb-b"></span></div>
+  <!-- Subtle film-grain texture, ties any backdrop into one visual language -->
+  <div id="grain"></div>
+  <!-- Legibility scrim, strongest at edges where UI sits -->
+  <div id="scrim"></div>
+
+  <!-- Drag & drop indicator -->
+  <div id="drop-indicator">
+    <span>drop to set as backdrop</span>
+  </div>
+
+  <main id="ui-layer">
+    <header class="top-row">
+      <div class="greeting-block">
+        <p class="eyebrow" id="date-line">Thursday, July 2</p>
+        <h1 class="greeting" id="greeting-text">good morning</h1>
+      </div>
+
+      <div class="status-block" id="status-block">
+        <div class="clock" id="clock">
+          <span id="clock-time">--:--</span><span id="clock-period"></span>
+        </div>
+        <button class="weather" id="weather" title="Weather">
+          <span class="weather-icon" id="weather-icon">·</span>
+          <span class="weather-temp" id="weather-temp">--°</span>
+          <span class="weather-place" id="weather-place"></span>
+        </button>
+      </div>
+    </header>
+
+    <nav id="quick-links" class="quick-links"></nav>
+
+    <div id="qlink-modal-backdrop" class="modal-backdrop hidden">
+      <div class="modal-card">
+        <h2 id="qlink-modal-title">add a site</h2>
+        <label class="field">
+          <span>name</span>
+          <input type="text" id="qlink-name-input" placeholder="Netflix" maxlength="24" />
+        </label>
+        <label class="field">
+          <span>url</span>
+          <input type="text" id="qlink-url-input" placeholder="netflix.com" />
+        </label>
+        <div class="modal-actions">
+          <button id="qlink-cancel-btn" class="btn-ghost">cancel</button>
+          <button id="qlink-save-btn" class="btn-primary small">save</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="qlink-menu" class="qlink-menu hidden">
+
+    <button id="edit-link">
+        ✏️
+        <span>Edit site</span>
+    </button>
+
+    <button id="delete-link">
+        🗑️
+        <span>Remove</span>
+    </button>
+
+</div>
+
+    <button id="mute-toggle" aria-label="Toggle sound" title="Sound" class="hidden">
+      <svg id="icon-sound-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="4,9 8,9 12,5 12,19 8,15 4,15" fill="currentColor" stroke="none"/>
+        <path d="M16 8.5a5 5 0 0 1 0 7"/>
+        <path d="M18.5 6a8.5 8.5 0 0 1 0 12"/>
+      </svg>
+      <svg id="icon-sound-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <polygon points="4,9 8,9 12,5 12,19 8,15 4,15" fill="currentColor" stroke="none"/>
+        <line x1="16" y1="9" x2="21" y2="14"/>
+        <line x1="21" y1="9" x2="16" y2="14"/>
+      </svg>
+    </button>
+
+    <button id="settings-toggle" aria-label="Settings" title="Settings">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="12" cy="12" r="3.2"/>
+        <path d="M19.4 13a7.7 7.7 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.7 7.7 0 0 0-1.7-1L14.9 3h-4l-.4 2.9a7.7 7.7 0 0 0-1.7 1l-2.5-1-2 3.5L6.4 11a7.7 7.7 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1a7.7 7.7 0 0 0 1.7 1l.4 2.9h4l.4-2.9a7.7 7.7 0 0 0 1.7-1l2.5 1 2-3.5L19.4 13Z"/>
+      </svg>
+    </button>
+
+    <aside id="settings-panel" aria-hidden="true">
+      <div class="panel-inner">
+        <h2>Settings</h2>
+
+        <label class="field">
+          <span>your name</span>
+          <input type="text" id="name-input" placeholder="Niranjan" maxlength="30" />
+        </label>
+
+        <div class="field">
+          <span>backdrop</span>
+          <div class="backdrop-row">
+            <button id="panel-upload-btn" class="btn-secondary">replace file</button>
+            <button id="panel-remove-btn" class="btn-ghost">remove</button>
+          </div>
+          <p class="field-hint" id="backdrop-meta">no file set</p>
+        </div>
+
+        <label class="field row">
+          <span>temperature</span>
+          <div class="segmented" id="unit-toggle">
+            <button data-unit="c" class="active">°C</button>
+            <button data-unit="f">°F</button>
+          </div>
+        </label>
+
+        <label class="field row">
+          <span>clock</span>
+          <div class="segmented" id="clock-toggle">
+            <button data-format="12" class="active">12h</button>
+            <button data-format="24">24h</button>
+          </div>
+        </label>
+
+        <label class="field row">
+          <span>dim backdrop</span>
+          <input type="range" id="scrim-slider" min="0" max="80" value="35" />
+        </label>
+
+        <div class="field">
+          <span>accent color</span>
+          <div class="swatch-row" id="accent-swatches">
+            <button class="swatch active" data-accent="sky" style="--sw-a:#a9dcff;--sw-b:#ffc182;" title="Sky &amp; amber"></button>
+            <button class="swatch" data-accent="mint" style="--sw-a:#a4f0c7;--sw-b:#ffe08a;" title="Mint &amp; gold"></button>
+            <button class="swatch" data-accent="rose" style="--sw-a:#ffb3c6;--sw-b:#ffdca8;" title="Rose &amp; peach"></button>
+            <button class="swatch" data-accent="violet" style="--sw-a:#c7b3ff;--sw-b:#8ee3ff;" title="Violet &amp; ice"></button>
+            <button class="swatch" data-accent="ember" style="--sw-a:#ffb27a;--sw-b:#ff8aa5;" title="Ember &amp; coral"></button>
+          </div>
+        </div>
+
+        <label class="field row">
+          <span>quick links</span>
+          <span class="switch">
+            <input type="checkbox" id="qlinks-toggle" checked />
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+          </span>
+        </label>
+
+        <p class="panel-footer">Everything stays on this device — nothing is uploaded anywhere. large videos use more battery each time a new tab is open.</p><span>Devloped by Niranjan</span>
+      </div>
+    </aside>
+
+    <input type="file" id="file-input" accept="image/*,video/*" hidden />
+  </main>
+
+<script src="db.js"></script>
+<script src="newtab.js"></script>
+</body>
+</html>
