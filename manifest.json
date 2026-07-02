@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Aurora — Personal New Tab",
+  "version": "1.0.0",
+  "description": "A calm, personal new tab. Your own photo, GIF, or 4K+ video as the backdrop, with a quiet greeting, clock, and weather.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["storage", "unlimitedStorage", "geolocation"],
+  "host_permissions": [
+    "https://api.open-meteo.com/*",
+    "https://api.bigdatacloud.net/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
