@@ -1,294 +1,302 @@
-# Aurora — Personal New Tab
+<div align="center">
 
-> A modern, distraction-free new tab experience for Chromium-based browsers.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:2c5364,100:00c6ff&height=220&section=header&text=Aurora&fontSize=75&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=A%20quiet%2C%20beautiful%20new%20tab%20%E2%80%94%20yours%20alone&descAlignY=55&descSize=20" width="100%"/>
 
-Aurora transforms every new tab into a beautiful and personal dashboard. Customize it with your own photos, GIFs, or videos while enjoying a clean interface featuring a greeting, live clock, local weather, and quick access to your favorite websites.
+<p>
+  <img src="https://img.shields.io/badge/Manifest-V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" />
+  <img src="https://img.shields.io/badge/Privacy-100%25_Local-00c6ff?style=for-the-badge&logo=shield&logoColor=white" />
+  <img src="https://img.shields.io/badge/Trackers-Zero-2c5364?style=for-the-badge" />
+</p>
 
-Designed with privacy in mind, Aurora stores everything locally on your device. No accounts, no tracking, no ads.
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/IndexedDB-2c5364?style=flat-square" />
+  <img src="https://img.shields.io/badge/Open--Meteo-00c6ff?style=flat-square" />
+</p>
 
----
+<h3><i>Every new tab, a little more yours.</i></h3>
 
-## Features
+<p>
+  <a href="#-features"><b>Features</b></a> ·
+  <a href="#-screenshots"><b>Screenshots</b></a> ·
+  <a href="#-installation"><b>Install</b></a> ·
+  <a href="#-privacy"><b>Privacy</b></a> ·
+  <a href="#-roadmap"><b>Roadmap</b></a>
+</p>
+
+</div>
+
+<br/>
+
+> Aurora turns every new tab into a calm, personal dashboard — your own photo, GIF, or video as the backdrop, with a soft glassmorphism greeting, live clock, local weather, and one-row quick links. Nothing leaves your device. No accounts, no analytics, no ads — just your tab, the way you left it.
+
+<br/>
+
+![Aurora Preview](./wallface.png)
+
+<br/>
+
+## ✨ Features
+
+<table>
+<tr>
+<td width="50%" valign="top">
 
 ### 🎥 Beautiful Custom Backgrounds
-- Set any image, GIF, or video as your new tab background.
-- Supports high-resolution media, including 4K videos.
-- Drag & drop support.
-- Replace or remove backgrounds anytime.
-- Video sound toggle.
+Set any image, GIF, or video — up to 4K — as your backdrop.
+- Drag & drop support
+- Replace or remove anytime
+- Video sound toggle
 
-### 👋 Personalized Experience
-- Dynamic greeting based on the current time.
-- Optional personalized name.
-- Elegant glassmorphism interface.
+</td>
+<td width="50%" valign="top">
+
+### 👋 A Personal Touch
+A dashboard that feels like it knows you, without knowing anything about you.
+- Time-based dynamic greeting
+- Optional personalized name
+- Soft glassmorphism interface
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 ### 🕒 Live Clock
-- Real-time clock.
-- Choose between:
-  - 12-hour format
-  - 24-hour format
+Always right there, never in the way.
+- 12-hour or 24-hour format
+- Real-time updates
 
-### 🌤 Local Weather
-- Automatically detects your location.
-- Displays:
-  - Current temperature
-  - Weather condition
-  - Location
-- Supports:
-  - Celsius (°C)
-  - Fahrenheit (°F)
+</td>
+<td width="50%" valign="top">
+
+### 🌤️ Local Weather
+A glance at the sky before you even look outside.
+- Current temperature & condition
+- Location name
+- °C / °F toggle
+- Auto-refresh every 30 minutes
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 ### 🔗 Quick Links
-- Create shortcuts to your favorite websites.
-- Website favicon support.
-- Right-click context menu.
-- Edit existing shortcuts.
-- Remove shortcuts.
-- One-row centered layout.
+Your favorite corners of the web, one click away.
+- Website favicon support
+- Right-click context menu
+- Edit / remove shortcuts
+- Clean, centered one-row layout
 
-### 🎨 Customization
+</td>
+<td width="50%" valign="top">
+
+### 🎨 Make It Yours
 - Multiple accent colors
 - Adjustable background dimming
-- Show or hide Quick Links
-- Fully local settings
+- Show/hide Quick Links
+- Every setting stored locally
 
-### 🔒 Privacy First
-- No user accounts
-- No analytics
-- No advertisements
-- No cloud storage
-- Everything stays on your device
+</td>
+</tr>
+</table>
 
----
+<br/>
 
-# Screenshots
-![alt text](image.png)
-![alt text](image-1.png)
----
+<div align="center">
 
-# Installation
+## 🔒 Privacy, by Design
 
-## Chrome / Brave / Edge (Developer Mode)
+<img src="https://img.shields.io/badge/✗-No_Accounts-2c5364?style=for-the-badge" />
+<img src="https://img.shields.io/badge/✗-No_Analytics-2c5364?style=for-the-badge" />
+<img src="https://img.shields.io/badge/✗-No_Ads-2c5364?style=for-the-badge" />
+<img src="https://img.shields.io/badge/✗-No_Cloud_Storage-2c5364?style=for-the-badge" />
 
-1. Download or clone this repository.
+**Everything Aurora knows about you lives only on your device.**
+Your location is requested solely to fetch the weather — never stored, never transmitted anywhere else.
 
-2. Extract the project if downloaded as a ZIP.
+</div>
 
-3. Open:
+<br/>
 
-```
-chrome://extensions
-```
+## 🖼️ Screenshots
 
-or
+> Images live at the project root (or move them into a `/screenshots` folder and update the paths below).
 
-```
-brave://extensions
-```
+<table>
+  <tr>
+    <td width="50%"><img src="./image.png" /><p align="center"><sub>New Tab — Custom Background & Greeting</sub></p></td>
+    <td width="50%"><img src="./image-1.png" /><p align="center"><sub>Settings Panel</sub></p></td>
+  </tr>
+</table>
 
-4. Enable **Developer Mode**.
+<br/>
 
-5. Click **Load unpacked**.
+## 📥 Installation
 
-6. Select the Aurora project folder.
+<div align="center">
+<img src="https://img.shields.io/badge/Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" />
+<img src="https://img.shields.io/badge/Brave-FB542B?style=for-the-badge&logo=brave&logoColor=white" />
+<img src="https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white" />
+</div>
 
-7. Open a new tab.
+<br/>
 
-Done.
+**Developer Mode install:**
 
----
+1. Download or clone this repository, and extract it if downloaded as a ZIP
+2. Open `chrome://extensions` (or `brave://extensions`, `edge://extensions`)
+3. Enable **Developer Mode**
+4. Click **Load unpacked**
+5. Select the Aurora project folder
+6. Open a new tab — done ✨
 
-# Usage
+<br/>
 
-## Setting a Background
+## 🕹️ Usage
 
-You can:
+<details open>
+<summary><strong>Setting a background</strong></summary>
 
-- Click **Choose a File**
-- Drag and drop an image, GIF, or video anywhere on the page
+Click **Choose a File**, or drag and drop an image, GIF, or video anywhere on the page.
 
-Supported formats include:
+**Supported formats:** JPG · PNG · WebP · GIF · MP4 · WebM · most browser-supported image/video formats
 
-- JPG
-- PNG
-- WebP
-- GIF
-- MP4
-- WebM
-- Most browser-supported image/video formats
+</details>
 
----
+<details>
+<summary><strong>Settings panel</strong></summary>
 
-## Settings
-
-Open the settings panel using the gear icon.
-
-Available options include:
+Open via the gear icon:
 
 - Change your display name
 - Replace or remove the background
-- Switch between °C and °F
+- Switch °C / °F
 - Toggle 12-hour / 24-hour clock
 - Adjust backdrop dimming
 - Change accent color
 - Show or hide Quick Links
 
----
+</details>
 
-## Weather
+<details>
+<summary><strong>Weather</strong></summary>
 
-Aurora requests your location only to retrieve the current weather forecast.
+Aurora requests your location only to fetch the current forecast, refreshing automatically every 30 minutes (or manually via a click on the widget). Your location is never stored or sent anywhere beyond that single weather request.
 
-The forecast refreshes automatically every 30 minutes.
+</details>
 
-You can also click the weather widget to refresh manually.
+<br/>
 
-Your location is **never stored or transmitted** beyond the weather request.
+## 🗄️ How Aurora Stores Things
 
----
+<div align="center">
 
-# Storage
+| What | Where | Notes |
+|---|---|---|
+| ⚙️ Settings | Chrome Storage Sync → Local Storage fallback | Syncs across your signed-in browser instances |
+| 🖼️ Background media | IndexedDB | Supports high-res images/video without hitting storage limits |
 
-Aurora stores all data locally.
+</div>
 
-### Settings
+Only **one background file** is stored at a time — setting a new one automatically overwrites the last, so nothing piles up.
 
-Stored using:
+<br/>
 
-- Chrome Storage Sync
-- Local Storage (fallback)
-
-### Background Media
-
-Large images and videos are stored using **IndexedDB**, allowing support for high-resolution media without browser storage limitations.
-
-Only **one background file** is stored at a time. Replacing your background automatically overwrites the previous one.
-
-No unnecessary files accumulate over time.
-
----
-
-# Project Structure
+## 📁 Project Structure
 
 ```
 Aurora/
-│
-├── manifest.json          Extension manifest (Manifest V3)
-├── newtab.html            Main new tab page
-├── style.css              User interface styling
-├── newtab.js              Main application logic
-├── db.js                  IndexedDB wrapper
-├── icons/                 Extension icons
+├── manifest.json     # Extension manifest (Manifest V3)
+├── newtab.html        # Main new tab page
+├── style.css           # Interface styling
+├── newtab.js            # Main application logic
+├── db.js                 # IndexedDB wrapper
+├── icons/                 # Extension icons
 └── README.md
 ```
 
----
+<br/>
 
-# Technologies
+## 🧰 Technologies
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- IndexedDB
-- Chrome Extension Manifest V3
-- Open-Meteo API
-- BigDataCloud Reverse Geocoding API
+<div align="center">
 
----
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/IndexedDB-4A90D9?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Manifest_V3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" />
 
-# Browser Support
+**APIs:** [Open-Meteo](https://open-meteo.com/) (weather) · [BigDataCloud](https://www.bigdatacloud.com/) (reverse geocoding)
 
-✔ Google Chrome
+</div>
 
-✔ Brave Browser
+<br/>
 
-✔ Microsoft Edge
+## 🌐 Browser Support
 
-✔ Vivaldi
+<div align="center">
 
-✔ Opera
+✔️ Google Chrome &nbsp;·&nbsp; ✔️ Brave &nbsp;·&nbsp; ✔️ Microsoft Edge &nbsp;·&nbsp; ✔️ Vivaldi &nbsp;·&nbsp; ✔️ Opera
 
-*(Any Chromium-based browser supporting Manifest V3.)*
+*Any Chromium-based browser that supports Manifest V3.*
 
----
+</div>
 
-# Performance
+<br/>
 
-Aurora is designed to remain lightweight while supporting rich media backgrounds.
-
-Features include:
+## ⚡ Performance
 
 - Hardware-accelerated video playback
-- Background video pausing when the tab is inactive
-- Efficient IndexedDB media storage
-- Local caching for weather data
-- Minimal CPU usage when idle
+- Background video pauses automatically when the tab is inactive
+- Efficient IndexedDB-backed media storage
+- Local weather caching
+- Minimal CPU usage at idle
 
----
+<br/>
 
-# Privacy
+## 🗺️ Roadmap
 
-Aurora does **not**:
+- [ ] Search bar
+- [ ] Bookmark folders
+- [ ] Drag-and-drop quick link sorting
+- [ ] Daily quotes
+- [ ] Calendar widget
+- [ ] Notes widget
+- [ ] Animated theme packs
+- [ ] More customization options
 
-- collect analytics
-- track browsing history
-- upload your files
-- create user accounts
-- send personal information to third parties
+<br/>
 
-Everything remains on your local device.
-
----
-
-# Third-Party Services
-
-Aurora uses the following public services:
-
-### Open-Meteo
-
-Current weather data.
-
-https://open-meteo.com/
-
-### BigDataCloud
-
-Reverse geocoding for displaying your location name.
-
-https://www.bigdatacloud.com/
-
----
-
-# Roadmap
-
-Planned improvements include:
-
-- Search bar
-- Bookmark folders
-- Drag-and-drop quick link sorting
-- Daily quotes
-- Calendar widget
-- Notes widget
-- Animated theme packs
-- More customization options
-
----
-
-# Contributing
+## 🤝 Contributing
 
 Contributions, feature requests, and bug reports are welcome.
 
-If you'd like to contribute:
-
+```bash
 1. Fork the repository
 2. Create a feature branch
 3. Commit your changes
 4. Open a Pull Request
+```
 
----
+<br/>
 
+## 👤 Author
 
-# Author
+<div align="center">
 
 **Niranjan**
+<br/>
+*Designed and developed for a cleaner, more personal browsing experience.*
 
-Designed and developed for a cleaner, more personal browsing experience.
+</div>
+
+<br/>
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:2c5364,100:00c6ff&height=120&section=footer" width="100%"/>
+</div>
